@@ -1,0 +1,16 @@
+<div class="container" ng-controller="MainController as login">
+<form method="POST" ng-submit="login.doLogin()">
+	<legend>Form title</legend>
+
+	<div class="form-group">
+		
+		<input type="text" class="form-control" id="" ng-model="login.loginData.username" name="username" placeholder="Enter your username">
+	</div>
+	<div class="form-group">
+		<input type="password" class="form-control" id="" ng-model="login.loginData.password" name="password" placeholder="Enter your password">
+	</div>
+	
+
+	<button type="submit" class="btn btn-primary">Submit</button>
+</form>
+</div>
