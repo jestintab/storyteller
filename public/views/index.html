@@ -3,58 +3,58 @@
 <head>
 	<title>Story Teller</title>
 	<!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0-rc.0/angular.min.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0-rc.0/angular.min.js"></script>
 
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-rc.0/angular-route.min.js"></script>
-<!-- Services -->
-<script type="text/javascript" src="../services/authService.js"></script>
-<script type="text/javascript" src="../services/userService.js"></script>
-<script type="text/javascript" src="../services/storyService.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-rc.0/angular-route.min.js"></script>
+	<!-- Services -->
+	<script type="text/javascript" src="../services/authService.js"></script>
+	<script type="text/javascript" src="../services/userService.js"></script>
+	<script type="text/javascript" src="../services/storyService.js"></script>
 
-<!-- Controllers -->
-<script type="text/javascript" src="../controllers/mainCtrl.js"></script>
-<script type="text/javascript" src="../controllers/userCtrl.js"></script>
-<script type="text/javascript" src="../controllers/storyCtrl.js"></script>
+	<!-- Controllers -->
+	<script type="text/javascript" src="../controllers/mainCtrl.js"></script>
+	<script type="text/javascript" src="../controllers/userCtrl.js"></script>
+	<script type="text/javascript" src="../controllers/storyCtrl.js"></script>
 
-<script type="text/javascript" src="../app.route.js"></script>
+	<script type="text/javascript" src="../app.route.js"></script>
 
-<script type="text/javascript" src="../app.js"></script>
+	<script type="text/javascript" src="../app.js"></script>
 </head>
 <body>
-<header ng-controller="MainController as main">
-	<nav class="navbar navbar-default" role="navigation">
-		<!-- Brand and toggle get grouped for better mobile display -->
-		<div class="navbar-header">
-			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-				<span class="sr-only">Toggle navigation</span>
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-			</button>
-			<a class="navbar-brand" href="#/">Story Teller</a>
-		</div>
-	
-		<!-- Collect the nav links, forms, and other content for toggling -->
-		<div class="collapse navbar-collapse navbar-ex1-collapse">
-			<ul class="nav navbar-nav">
+	<header ng-controller="MainController as main">
+		<nav class="navbar navbar-default" role="navigation">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#/">Story Teller</a>
+			</div>
 			
-				<li><a href="/users"></a></li>
-			</ul>
-			
-			<ul class="nav navbar-nav navbar-right">
-				<li ng-if="!main.loggedIn"><a href="#/login">Login</a></li>
-				<li ng-if="!main.loggedIn"><a href="#/signup">Signup</a><li>
-				<li ng-if="main.loggedIn"><a href="#">Hello {{ main.user.username}}</a></li>
-				<li ng-if="main.loggedIn"><a href="#" ng-click="main.doLogout()">Logout </a></li>
-
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse navbar-ex1-collapse">
+				<ul class="nav navbar-nav">
+					
+					<li><a href="/users"></a></li>
+				</ul>
 				
-			</ul>
-		</div><!-- /.navbar-collapse -->
-	</nav>
-</header>
-<div class="container"> 
-<div ng-view> </div>
-</div>
-</body>
-</html>
+				<ul class="nav navbar-nav navbar-right">
+					<li ng-if="!main.loggedIn"><a href="#/login">Login</a></li>
+					<li ng-if="!main.loggedIn"><a href="#/signup">Signup</a><li>
+						<li ng-if="main.loggedIn"><a href="#">Hello {{ main.user.username}}</a></li>
+						<li ng-if="main.loggedIn"><a href="#" ng-click="main.doLogout()">Logout </a></li>
+
+						
+					</ul>
+				</div><!-- /.navbar-collapse -->
+			</nav>
+		</header>
+		<div class="container"> 
+			<div ng-view> </div>
+		</div>
+	</body>
+	</html>
